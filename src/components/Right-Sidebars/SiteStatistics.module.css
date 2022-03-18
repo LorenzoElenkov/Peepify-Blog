@@ -1,0 +1,29 @@
+.siteStatsContainer {
+    border: 1px solid black;
+    width: 100%;
+    font-size: 12px;
+    padding: 0 10px;
+    font-weight: 600;
+    height: max-content;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.registeredUsers, .totalPeeps, .totalComments {
+    font-size: 12px;
+    font-weight: 600;
+    color: #050836;
+}
+
+.siteStatsTitle {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 800;
+    color: #050836;
+}
+
+@media screen and (max-width: 500px) {
+    .siteStatsContainer {
+        display: none;
+    }
+}

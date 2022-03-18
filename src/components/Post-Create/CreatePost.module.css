@@ -1,0 +1,69 @@
+.createPost {
+    width: 100%;
+    height: max-content;
+    padding: 10px 0px;
+    background-color: rgba(255, 255, 255, 0.4);
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+.createPost > .you {
+    background-color: #5995ED;
+    margin: 0 5px;
+    border-radius: 50%;
+    height: 40px;
+    grid-column: 1/2;
+    color: aliceblue;
+    align-self: start;
+    margin-top: 10px;
+}
+
+.createPost > form {
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 5px 0 0;
+}
+
+.createPost > form > .textarea {
+    grid-column: 1/3;
+    height: max-content;
+    outline: none;
+}
+
+.createPost > form > .textarea:empty::before {
+    content: "What's on your mind?";
+    color: rgba(0, 0, 0, 0.432);
+}
+
+.createPost > form > button {
+    width: max-content;
+    grid-column: 1/3;
+    justify-self: end;
+    background: linear-gradient(0.25turn, crimson, #5995ED);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    transition: background-position .5s;
+    color: aliceblue;
+    font-weight: 600;
+    font-size: 13px;
+    padding: 5px 12.5px;
+    border: none;
+    border-radius: 10px;
+    animation: buttonAnim 1.5s linear infinite;
+    cursor: pointer;
+}
+
+
+@keyframes buttonAnim {
+    0%, 100% {background-position: 100% 0}
+    50% {background-position: 30% 0}
+}
+
+
+
+.createPost > form > button:active {
+    color: rgb(199, 205, 211);
+}

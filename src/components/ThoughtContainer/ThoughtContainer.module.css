@@ -1,0 +1,39 @@
+.thoughtContainer {
+    height: 88vh;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.thoughtContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.noPeeps {
+    text-align: center;
+}
+
+.loadingImg {
+    padding: 40px 0;
+    justify-self: center;
+    align-self: center;
+    width: 30px;
+}
+
+.loadingAnim {
+    animation: loadingRotate 0.3s linear infinite;
+}
+
+@keyframes loadingRotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+.scrollToRefresh {
+    font-size: 10px;
+    color: rgb(175, 175, 175);
+}

@@ -1,0 +1,27 @@
+.gridBody {
+    padding: 0 3%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    margin-top: 20px;
+    column-gap: 10px;
+}
+
+.loginBefore {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 700px) {
+    .gridBody {
+        padding: 0 3%;
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 20px;
+        column-gap: 10px;
+    }
+    
+    .loginBefore {
+        font-size: 14px;
+        font-weight: 500;
+    }
+}

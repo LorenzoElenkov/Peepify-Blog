@@ -1,0 +1,194 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+}
+
+.modal {
+    width: 35%;
+    height: max-content;
+    background: linear-gradient(0.85turn, aliceblue, #8ab9ff);
+    margin-top: 50px;
+    border-radius: 15px;
+    padding: 40px 70px;
+    display: flex;
+    flex-direction: column;
+}
+
+.underText, .signUpText, .underText2 {
+    font-size: 0.7vw;
+    margin-bottom: 25px;
+    color: rgba(0, 0, 0, 0.45);
+}
+
+.underText2 {
+    font-size: 0.9vw;
+}
+
+.signUpText {
+    margin: 5px 0 0 0;
+}
+
+.signUpText > button {
+    font-size: 10px;
+    color: #5995ED;
+    background-color: transparent;
+    border: none;
+    padding-left: 5px;
+    font-weight: 700;
+}
+
+.signUpText > button:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.spanSign {
+    padding: 0 0 20px 0;
+    font-size: 24px;
+    color: #050836;
+}
+
+.modal > form {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+.modal > form > input {
+    width: 100%;
+    font-size: 0.9vw;
+    height: 2vw;
+    outline: none;
+    align-self: center;
+}
+
+
+.modal > form > label {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 0.9vw;
+    font-weight: 500;
+    text-align: end;
+}
+
+.modal > form > .buttons {
+    grid-column: 1/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.modal > form > .buttons > button {
+    width: max-content;
+    justify-self: end;
+    padding: 5px 25px;
+    background-color: #5995ED;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.modal > form > .buttons > button:nth-child(2) {
+    background-color: #8a96a8;
+}
+
+.loadingLogin {
+    animation: loadingAnim 0.75s linear 5;
+    width: 3vw;
+    height: 3vw;
+    margin-left: 43%;
+}
+
+@keyframes loadingAnim {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+.registerGuest {
+    font-size: 10px;
+    color: gray;
+    margin-top: 10px;
+}
+
+.registerGuest > button {
+    font-size: 10px;
+    color: #5995ED;
+    background-color: transparent;
+    border: none;
+    font-weight: 700;
+    padding: 0 5px;
+}
+
+.registerGuest > button:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+    .modal {
+        width: 95%;
+        align-self: center;
+        margin-top: 0;
+        padding: 30px 40px;
+    }
+    .underText, .signUpText, .underText2 {
+        font-size: 12px;
+    }
+    
+    .signUpText {
+        margin: 20px 0 0 0;
+    }
+    
+    .signUpText > button {
+        font-size: 12px;
+    }
+    
+    .signUpText > button:hover {
+        text-decoration: none;
+        cursor: auto;
+    }
+    
+    .modal > form > input {
+        font-size: 10px;
+        padding: 5px;
+        height: max-content;
+    }
+    
+    .modal > form > label {
+        font-size: 12px;
+    }
+    
+    .modal > form > .buttons {
+        margin-top: 20px;
+    }
+    
+    .loadingLogin {
+        width: 12vw;
+        height: 12vw;
+    }
+
+    .registerGuest {
+        font-size: 12px;
+        margin-top: 20px;
+    }
+    
+    .registerGuest > button {
+        font-size: 12px;
+    }
+    
+    .registerGuest > button:hover {
+        text-decoration: none;
+        cursor: auto;
+    }
+}
