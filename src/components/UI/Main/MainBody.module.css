@@ -2,6 +2,24 @@
     display: flex;
     flex-direction: column;
     row-gap: 10px;
-    height: max-content;
+    /* height: 91vh; */
 }
+
+/* @media screen and (max-width: 340px) {
+    .mainBody {
+        height: 89vh;
+    }
+}
+
+@media screen and (min-width: 381px) and (max-width: 410px) {
+    .mainBody {
+        height: 92.5vh;
+    }
+}
+
+@media screen and (min-width: 411px) and (max-width: 450px) {
+    .mainBody {
+        height: 91.8vh;
+    }
+} */
 

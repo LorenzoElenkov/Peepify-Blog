@@ -1,17 +1,18 @@
 .thought {
-    padding: 10px 10px 10px 0px;
-    border: 1px solid black;
+    padding: 15px 10px 15px 0px;
     border-radius: 15px;
     display: grid;
     grid-template-columns: 10% 90%;
     row-gap: 5px;
-    transition: all 0.3s;
-    background-color: rgba(255, 255, 255, 0.4);
+    transition: all 0.5s;
+    background-color: transparent;
+    box-shadow: inset 0 0 10px 0 rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(5px);
     width: 99.9%;
 }
 
 .thought:hover {
-    border: 3px solid black;
+    box-shadow: inset 0 0 10px 0 rgba(255, 255, 255, 0.75);
 }
 
 .userIcon {
@@ -24,16 +25,19 @@
     margin-top: -15px;
     color: white;
     height: max-content;
+    position: relative;
 }
 
+
 .author {
-    font-size: 10px;
+    font-size: 12px;
     grid-column: 2/3;
     grid-row: 1/1;
     font-weight: 700;
     align-self: start;
     justify-self: start;
     text-align: start;
+    color: aliceblue;
 }
 
 .message {
@@ -45,15 +49,16 @@
     font-weight: 400;
     height: max-content;
     white-space: pre-line;
+    color: aliceblue;
 }
 
 .timeCreated {
     font-size: 10px;
     font-weight: 500;
-    color: gray;
-    align-self: start;
+    color: black;
+    align-self: center;
     justify-self: start;
-    text-align: start;
+    color: aliceblue;
 }
 
 .likeContainer {
@@ -71,13 +76,14 @@
     font-size: 10px;
     margin-top: 10px;
     font-weight: 500;
+    color: aliceblue;
 }
 
 .likeButton, .unlikeButton {
     grid-column: 1/2;
-    font-size: 9px;
+    font-size: 12px;
+    padding: 3px 8px;
     font-weight: 600;
-    /* background-color: #5995ED; */
     border: none;
     border-radius: 5px;
     color: white;
@@ -114,20 +120,100 @@
 .commentsTotal {
     background-color: transparent;
     border: none;
-    border-left: 1px solid black;
+    border-left: 1px solid aliceblue;
     font-size: 10px;
     font-weight: 500;
     grid-column: 3/3;
     margin-top: 10px;
     padding: 5px;
+    color: aliceblue;
 }
 
 .commentsTotal:hover {
     cursor: pointer;
 }
 
-@media screen and (max-width: 320px) {
-    .message {
+
+@media screen and (max-width: 340px) {
+    .thought {
+        grid-template-columns: 17% 83%;
+    }
+    .userIcon {
+        padding: 5px 5px;
+    }
+    .likeButton, .unlikeButton {
+        font-size: 14px;
+        padding: 3px 8px;
+    }
+    .likeTotal {
+        font-size: 11px;
+    }
+    .commentsTotal {
+        font-size: 11px;
+    }
+    .message { 
+        font-size: 13px;
+    }
+    .author {
         font-size: 12px;
+    }
+    .timeCreated {
+        font-size: 11px;
+    }
+}
+
+@media screen and (min-width: 341px) and (max-width: 380px) {
+    .thought {
+        grid-template-columns: 15% 85%;
+    }
+    .userIcon {
+        padding: 5px 5px;
+    }
+    .likeButton, .unlikeButton {
+        font-size: 14px;
+        padding: 3px 8px;
+    }
+    .likeTotal {
+        font-size: 12px;
+    }
+    .commentsTotal {
+        font-size: 12px;
+    }
+    .message { 
+        font-size: 14px;
+    }
+    .author {
+        font-size: 13px;
+    }
+    .timeCreated {
+        font-size: 11px;
+    }
+}
+
+@media screen and (min-width: 381px) and (max-width: 450px) {
+    .thought {
+        grid-template-columns: 15% 85%;
+    }
+    .userIcon {
+        padding: 5px 5px;
+    }
+    .likeButton, .unlikeButton {
+        font-size: 14px;
+        padding: 3px 8px;
+    }
+    .likeTotal {
+        font-size: 14px;
+    }
+    .commentsTotal {
+        font-size: 14px;
+    }
+    .message { 
+        font-size: 14px;
+    }
+    .author {
+        font-size: 13px;
+    }
+    .timeCreated {
+        font-size: 11px;
     }
 }

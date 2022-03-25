@@ -1,5 +1,11 @@
 .rightBar {
     display: flex;
     justify-content: center;
-    /* background-color: #F24236; */
+}
+
+
+@media screen and (max-width: 700px) {
+    .rightBar {
+        display: none;
+    }
 }

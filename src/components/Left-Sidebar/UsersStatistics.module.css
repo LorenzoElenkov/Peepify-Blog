@@ -6,6 +6,7 @@
 .userStats {
     font-size: 12px;
     font-weight: 600;
+    color: aliceblue;
 }
 .userStats2 {
     font-size: 12px;
@@ -22,18 +23,20 @@
 
 .userStatsContainer {
     border: 1px solid black;
-    padding: 0 10px;
+    padding: 0 10px 10px 20px;
     width: 100%;
     height: max-content;
-    background-color: rgba(255, 255, 255, 0.4);
     border-radius: 15px;
-
+    background-color: #06083c81;
+    backdrop-filter: blur(5px);
+    box-shadow: inset 0 0 10px 0 rgba(255, 255, 255, 0.35);
 }
 
 .userStatsTitle {
     font-size: 15px;
     font-weight: 800;
     text-align: center;
+    color: aliceblue;
 }
 
 .closeAccountWindow {

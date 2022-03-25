@@ -60,6 +60,10 @@ const Grid = props => {
     };
 
     useEffect(() => {
+        queryPeeps();
+    },[]);
+
+    useEffect(() => {
         setIsAccountShown(props.isMenuOnOff);
     },[props.isMenuOnOff]);
 

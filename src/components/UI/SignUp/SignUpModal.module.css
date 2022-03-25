@@ -13,7 +13,7 @@
 .modal {
     width: 35%;
     height: max-content;
-    background: linear-gradient(0.35turn, aliceblue, #8ab9ff);
+    background: linear-gradient(0.45turn, #8730DF, #29FFBF);
     margin-top: 50px;
     border-radius: 15px;
     padding: 40px 70px;
@@ -23,7 +23,7 @@
 .underText, .signUpText, .underText2 {
     font-size: 0.7vw;
     margin-bottom: 25px;
-    color: gray;
+    color: aliceblue;
 }
 
 .underText2 {
@@ -31,11 +31,13 @@
 }
 
 .signUpText {
+    font-size: 11px;
     margin: 10px 0 0 0;
+    color: aliceblue;
 }
 
 .signUpText > button {
-    font-size: 0.7vw;
+    font-size: 11px;
     color: #5995ED;
     background-color: transparent;
     border: none;
@@ -51,7 +53,7 @@
 .spanSign {
     padding: 0 0 20px 0;
     font-size: 24px;
-    color: #050836;
+    color: aliceblue;
 }
 
 .modal > form {
@@ -76,6 +78,7 @@
     font-size: 0.9vw;
     font-weight: 500;
     text-align: end;
+    color: aliceblue;
 }
 
 .modal > form > .buttons {
@@ -95,11 +98,12 @@
     color: white;
     border-radius: 10px;
     margin-top: 10px;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .modal > form > .buttons > button:nth-child(2) {
-    background-color: #8a96a8;
+    background-color: transparent;
+    border: 1px solid aliceblue;
 }
 
 .loadingLogin {
@@ -115,13 +119,13 @@
 }
 
 .registerGuest {
-    font-size: 10px;
-    color: gray;
-    margin-top: 10px;
+    font-size: 11px;
+    color: aliceblue;
+    margin-top: 30px;
 }
 
 .registerGuest > button {
-    font-size: 10px;
+    font-size: 11px;
     color: #5995ED;
     background-color: transparent;
     border: none;

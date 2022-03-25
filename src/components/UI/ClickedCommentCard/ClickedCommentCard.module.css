@@ -45,3 +45,39 @@
     font-weight: 500;
     color: gray;
 }
+
+@media screen and (max-width: 340px) {
+    .clickedCommentCard {
+        grid-template-columns: 15% 70% 15%;
+    }
+    .commentAuthor {
+        font-size: 10px;
+    }
+    .commentIcon {
+        padding: 5px;
+    }
+}
+
+@media screen and (min-width: 341px) and (max-width: 380px) {
+    .clickedCommentCard {
+        grid-template-columns: 15% 70% 15%;
+    }
+    .commentAuthor {
+        font-size: 10px;
+    }
+    .commentIcon {
+        padding: 5px;
+    }
+}
+
+@media screen and (min-width: 381px) and (max-width: 450px) {
+    .clickedCommentCard {
+        grid-template-columns: 15% 70% 15%;
+    }
+    .commentAuthor {
+        font-size: 10px;
+    }
+    .commentIcon {
+        padding: 5px;
+    }
+}
