@@ -3,10 +3,10 @@
     display: grid;
     grid-template-columns: 10% 75% 15%;
     padding: 5px 10px 0 0;
-    border: 1px solid black;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
+    box-shadow: inset 5px 5px 5px 0 rgba(255, 255, 255, 0), inset 10px 0 10px -10px rgba(255, 255, 255, 0.35), inset -10px 0 10px -10px rgba(255, 255, 255, 0.35), inset 0 10px 10px -10px rgba(255, 255, 255, 0.35);
 }
 
 .closeThought {
@@ -38,6 +38,7 @@
     grid-column: 2/2;
     grid-row: 1/1;
     display: flex;
+    color: aliceblue;
 }
 
 .thisIcon {
@@ -45,7 +46,7 @@
     border-radius: 50vw;
     padding: 0.5vw 0.5vw;
     justify-self: center;
-    margin-top: 5px;
+    margin-top: 10px;
     color: white;
     grid-row: 1/1;
     grid-column: 1/1;
@@ -59,16 +60,17 @@
     justify-self: start;
     padding-bottom: 15px;
     white-space: pre-line;
+    color: aliceblue;
 }
 
 .socialCard {
     width: 100%;
-    border: 1px solid black;
     border-top: none;
     display: grid;
     grid-template-columns: 10% repeat(3, max-content);
-    padding: 3px 0;
-    background-color: rgba(255, 255, 255, 0.4);
+    padding: 5px 0 12px 0;
+    backdrop-filter: blur(5px);
+    box-shadow: inset 5px 5px 15px 0px rgba(255, 255, 255, 0), inset 10px 0 10px -10px rgba(255, 255, 255, 0.35), inset -10px 0 10px -10px rgba(255, 255, 255, 0.35), inset 0 -10px 10px -10px rgba(255, 255, 255, 0.35);
 }
 
 .likeThisThought, .unlikeThisThought {
@@ -104,6 +106,7 @@
     grid-row: 1/1;
     grid-column: 3/3;
     padding: 0 5px 0 5px;
+    color: aliceblue;
 }
 
 .likeThisThought:active {
@@ -117,6 +120,7 @@
     grid-column: 4/4;
     border-left: 1px solid black;
     padding-left: 5px;
+    color: aliceblue;
 }
 
 .emptyThis {
@@ -138,6 +142,7 @@
     font-size: 14px;
     padding: 10px 0;
     font-weight: 500;
+    color: aliceblue;
 }
 
 .commentsContainer {
@@ -155,8 +160,8 @@
 .timeCreated {
     font-size: 10px;
     font-weight: 500;
-    color: gray;
     align-self: center;
+    color: aliceblue;
 }
 
 @media screen and (max-width: 340px) {
