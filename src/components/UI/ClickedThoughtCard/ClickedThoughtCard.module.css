@@ -69,6 +69,7 @@
     display: grid;
     grid-template-columns: 10% repeat(3, max-content);
     padding: 5px 0 12px 0;
+    
     backdrop-filter: blur(5px);
     box-shadow: inset 5px 5px 15px 0px rgba(255, 255, 255, 0), inset 10px 0 10px -10px rgba(255, 255, 255, 0.35), inset -10px 0 10px -10px rgba(255, 255, 255, 0.35), inset 0 -10px 10px -10px rgba(255, 255, 255, 0.35);
 }
