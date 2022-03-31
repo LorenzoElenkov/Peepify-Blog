@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Peepify-Blog/static/css/main.43e22fcc.css",
+    "main.css": "/Peepify-Blog/static/css/main.bcb52722.css",
     "main.js": "/Peepify-Blog/static/js/main.2c515309.js",
     "static/media/suntornado.svg": "/Peepify-Blog/static/media/suntornado.e7d5482bba8a92f4326e81d3b16a4ecf.svg",
     "index.html": "/Peepify-Blog/index.html",
-    "main.43e22fcc.css.map": "/Peepify-Blog/static/css/main.43e22fcc.css.map",
+    "main.bcb52722.css.map": "/Peepify-Blog/static/css/main.bcb52722.css.map",
     "main.2c515309.js.map": "/Peepify-Blog/static/js/main.2c515309.js.map"
   },
   "entrypoints": [
-    "static/css/main.43e22fcc.css",
+    "static/css/main.bcb52722.css",
     "static/js/main.2c515309.js"
   ]
 }
