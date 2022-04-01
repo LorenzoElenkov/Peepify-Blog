@@ -1,3 +1,4 @@
+
 .clickedThoughtCard {
     width: 100%;
     display: grid;
@@ -5,8 +6,9 @@
     padding: 5px 10px 0 0;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    backdrop-filter: blur(5px);
-    box-shadow: inset 5px 5px 5px 0 rgba(255, 255, 255, 0), inset 10px 0 10px -10px rgba(255, 255, 255, 0.35), inset -10px 0 10px -10px rgba(255, 255, 255, 0.35), inset 0 10px 10px -10px rgba(255, 255, 255, 0.35);
+    box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.2);
+    border: 1px solid transparent;
+    background: #d4feff;
 }
 
 .closeThought {
@@ -38,7 +40,7 @@
     grid-column: 2/2;
     grid-row: 1/1;
     display: flex;
-    color: aliceblue;
+    color: #463239;
 }
 
 .thisIcon {
@@ -60,7 +62,7 @@
     justify-self: start;
     padding-bottom: 15px;
     white-space: pre-line;
-    color: aliceblue;
+    color: #463239;
     
 }
 
@@ -70,10 +72,11 @@
     display: grid;
     grid-template-columns: 10% repeat(3, max-content);
     padding: 5px 0 12px 0;
-
-    backdrop-filter: blur(5px);
-    box-shadow: inset 5px 5px 15px 0px rgba(255, 255, 255, 0), inset 10px 0 10px -10px rgba(255, 255, 255, 0.35), inset -10px 0 10px -10px rgba(255, 255, 255, 0.35), inset 0 -10px 10px -10px rgba(255, 255, 255, 0.35);
+    border: 1px solid transparent;
+    background: #d4feff;
+    box-shadow: 0 15px 0px 0px #d4feff, 0 -15px 0px 0px #d4feff, 5px 0 15px -4px rgba(0, 0, 0, 0.2), -5px 0 15px -4px rgba(0, 0, 0, 0.2);
 }
+
 
 .likeThisThought, .unlikeThisThought {
     grid-column: 2/2;
@@ -108,7 +111,7 @@
     grid-row: 1/1;
     grid-column: 3/3;
     padding: 0 5px 0 5px;
-    color: aliceblue;
+    color: #463239;
 }
 
 .likeThisThought:active {
@@ -120,13 +123,13 @@
     font-weight: 500;
     grid-row: 1/1;
     grid-column: 4/4;
-    border-left: 1px solid black;
+    border-left: 1px solid #463239;
     padding-left: 5px;
-    color: aliceblue;
+    color: #463239;
 }
 
 .emptyThis {
-    border-right: 1px solid black;
+    border-right: 1px solid #463239;
     width: 100%;
     grid-row: 1/1;
     grid-column: 1/1;
@@ -144,7 +147,7 @@
     font-size: 14px;
     padding: 10px 0;
     font-weight: 500;
-    color: aliceblue;
+    color: #463239;
 }
 
 .commentsContainer {
@@ -163,7 +166,7 @@
     font-size: 10px;
     font-weight: 500;
     align-self: center;
-    color: aliceblue;
+    color: #463239;
 }
 
 @media screen and (max-width: 340px) {
@@ -174,7 +177,7 @@
         padding: 5px 5px;
     }
     .thisMessage {
-        font-size: 12px;
+        font-size: 13px;
     }
     .likeThisThought, .unlikeThisThought {
         font-size: 14px;
@@ -199,7 +202,7 @@
         padding: 5px 5px;
     }
     .thisMessage {
-        font-size: 12px;
+        font-size: 13px;
     }
     .likeThisThought, .unlikeThisThought {
         font-size: 14px;
@@ -224,7 +227,7 @@
         padding: 5px 5px;
     }
     .thisMessage {
-        font-size: 12px;
+        font-size: 13px;
     }
     .likeThisThought, .unlikeThisThought {
         font-size: 14px;
