@@ -1,0 +1,57 @@
+
+.refreshButton {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    color: aliceblue;
+    box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.2);
+    border: 1px solid transparent;
+    background: #d4feff;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 14px;
+    transition: 0.5s box-shadow;
+    color: #86808294;
+    font-weight: 600;
+}
+
+.refreshButton:hover {
+    box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+.loadingImgContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.loadingImg {
+    width: 30px;
+    height: 30px;
+    filter: grayscale(1);
+    filter: invert(1);
+    animation: loadingRotate 0.5s infinite;
+}
+
+@keyframes loadingRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@media screen and (max-width: 340px) {
+    .refreshButton {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 341px) and (max-width: 380px) {
+    .refreshButton {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 381px) and (max-width: 450px) {
+    .refreshButton {
+        font-size: 18px;
+    }
+}

@@ -5,26 +5,25 @@
     margin-top: 20px;
     column-gap: 10px;
     height: 90%;
+    overflow-x: hidden;
 }
 
 .loginBefore {
     font-size: calc(14px + 0.25vw);
     font-weight: 500;
-    color: aliceblue;
+    color: #463239;
 }
+
+
 
 @media screen and (max-width: 700px) {
     .gridBody {
-        padding: 0 3%;
-        display: grid;
         grid-template-columns: 1fr;
-        margin-top: 20px;
-        column-gap: 10px;
-        height: 89%;
     }
     
     .loginBefore {
         font-size: 14px;
         font-weight: 500;
     }
+
 }

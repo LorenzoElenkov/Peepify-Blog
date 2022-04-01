@@ -1,11 +1,6 @@
 .rightBar {
     display: flex;
     justify-content: center;
+    padding: 10px 0;
 }
 
-
-@media screen and (max-width: 700px) {
-    .rightBar {
-        display: none;
-    }
-}

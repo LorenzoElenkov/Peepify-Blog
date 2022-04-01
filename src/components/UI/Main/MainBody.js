@@ -4,7 +4,7 @@ import styles from './MainBody.module.css';
 
 const MainBody = (props) => {
     return (
-        <section className={styles.mainBody}>
+        <section className={props.onHamburgerMenu ? styles.mainBody + ' ' + styles.onMenu : styles.mainBody}>
             {props.children}
         </section>
     );

@@ -56,12 +56,14 @@ const Grid = props => {
             likes: likes,
             comments: comments
         });
-        // queryPeeps();
     };
 
+
     useEffect(() => {
-        queryPeeps();
-    },[]);
+        if (auth.currentUser != undefined) {
+            queryPeeps();
+        }
+    },[auth.currentUser]);
 
     useEffect(() => {
         setIsAccountShown(props.isMenuOnOff);
@@ -74,17 +76,18 @@ const Grid = props => {
     return(
         <section className={styles.gridBody}>
             <LeftBar>
-                {props.onSignedUser && window.innerWidth > 700 && <UsersStatistics onSignedUser={props.onSignedUser}/>}
-                {props.onSignedUser && window.innerWidth <= 700 && isAccountShown && <UsersStatistics onSignedUser={props.onSignedUser} onClose={handleOnCloseAccountTab}/>}
+                {props.onSignedUser && (window.innerWidth > 700 && <UsersStatistics onSignedUser={props.onSignedUser}/>)}
+                {props.onSignedUser && (window.innerWidth <= 700 && isAccountShown) && <UsersStatistics onSignedUser={props.onSignedUser} onClose={handleOnCloseAccountTab}/>}
             </LeftBar>
-            <MainBody>
+            <MainBody onHamburgerMenu={props.isHamburgerMenu}>
                 {!props.onSignedUser && <span className={styles.loginBefore}>Please login, register, or login as guest!</span>}
                 {props.onSignedUser && !clickedThought && <CreatePost onSignedUser={props.onSignedUser} onCreatePost={queryPeeps}/>}
                 {props.onSignedUser && !clickedThought && <ThoughtContainer peeps={peeps} onClickThought={onClickedThought} onRefresh={queryPeeps}/>}
                 {props.onSignedUser && clickedThought && <ClickedThoughtCard onClose={onClickedThought} data={clickedThoughtMap}/>}
             </MainBody>
             <RightBar>
-                <SiteStatistics onSignedUser={props.onSignedUser} onQuery={peeps}/>
+                {props.isStatsOnOff && window.innerWidth <= 700 && <SiteStatistics onSignedUser={props.onSignedUser} onQuery={peeps} onClose={() => {props.setTheStatsOff()}}/>}
+                {window.innerWidth > 700 && <SiteStatistics onSignedUser={props.onSignedUser} onQuery={peeps}/>} 
             </RightBar>
         </section>
     )

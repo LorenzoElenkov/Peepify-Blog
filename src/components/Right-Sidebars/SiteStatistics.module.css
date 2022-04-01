@@ -1,3 +1,8 @@
+.backdrop {
+    display: block;
+    width: 100%;
+}
+
 .siteStatsContainer {
     width: 100%;
     font-size: 12px;
@@ -5,26 +10,71 @@
     font-weight: 600;
     height: max-content;
     border-radius: 15px;
-    background-color: #06083c81;
-    backdrop-filter: blur(5px);
-    box-shadow: inset 0 0 10px 0 rgba(255, 255, 255, 0.35);
+    box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.2);
+    border: 1px solid transparent;
+    background: #d4feff;
 }
 
 .registeredUsers, .totalPeeps, .totalComments {
     font-size: 12px;
     font-weight: 600;
-    color: aliceblue;
+    color: #463239;
 }
 
 .siteStatsTitle {
     text-align: center;
     font-size: 15px;
     font-weight: 800;
-    color: aliceblue;
+    color: #463239;
 }
 
-@media screen and (max-width: 500px) {
+.closeStats {
+    display: none;
+}
+
+@media screen and (max-width: 700px) {
+    .backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        backdrop-filter: blur(10px);
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+
     .siteStatsContainer {
-        display: none;
+        align-self: center;
+        justify-self: center;
+        background-color: #086375;
+        box-shadow: inset 0 0 10px 1px rgba(255, 255, 255, 0.5);
+        border: none;
+        width: 95%;
+    }
+
+    .closeStats {
+        display: block;
+        float: right;
+        background-color: #0a8faa;
+        border: none;
+        color: aliceblue;
+        padding: 8px 23px;
+        border-radius: 15px;
+        font-weight: 700;
+    }
+
+    .registeredUsers, .totalPeeps, .totalComments {
+        font-size: 14px;
+        font-weight: 700;
+        color: aliceblue;
+    }
+    
+    .siteStatsTitle {
+        text-align: center;
+        font-size: 18px;
+        font-weight: 800;
+        color: aliceblue;
+        padding: 10px 0;
     }
 }

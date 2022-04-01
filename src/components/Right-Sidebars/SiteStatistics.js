@@ -33,12 +33,15 @@ const SiteStatistics = (props) => {
 
 
   return (
-    <section className={styles.siteStatsContainer}>
-        <p className={styles.siteStatsTitle}>Site Statistics</p>
-        <p className={styles.registeredUsers}>Registered users: {numAccounts}</p>
-        {auth.currentUser && <p className={styles.totalPeeps}>Total posts: {props.onQuery.length > 0 ? props.onQuery.length : ''}</p>}
-        {auth.currentUser && <p className={styles.totalComments}>Total comments: {numComments}</p>}
-    </section>
+    <div className={styles.backdrop}>
+        <section className={styles.siteStatsContainer}>
+            <p className={styles.siteStatsTitle}>Site Statistics</p>
+            <p className={styles.registeredUsers}>Registered users: {numAccounts}</p>
+            {auth.currentUser && <p className={styles.totalPeeps}>Total posts: {props.onQuery.length > 0 ? props.onQuery.length : ''}</p>}
+            {auth.currentUser && <p className={styles.totalComments}>Total comments: {numComments}</p>}
+            <button className={styles.closeStats} onClick={props.onClose}>Close</button>
+        </section>
+    </div>
   )
 }
 

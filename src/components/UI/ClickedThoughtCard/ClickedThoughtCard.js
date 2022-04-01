@@ -27,12 +27,6 @@ const ClickedThoughtCard = (props) => {
       setPeepComments(props.data.comments);
   },[]);
 
-  useLayoutEffect(() => {
-    const messageHeight = getComputedStyle(peepMessage.current).height;
-    const socialHeight = getComputedStyle(peepSocial.current).height;
-    const addCommentHeight = getComputedStyle(peepCommentAdd.current).height;
-    commentSection.current.style.height = (window.innerHeight - 60 - Number(messageHeight.replace('px', '')) - Number(socialHeight.replace('px', '')) - Number(addCommentHeight.replace('px', ''))).toString() + 'px';
-  },[]);
 
     const onLikePeep = async () => {
         try {

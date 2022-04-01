@@ -90,7 +90,7 @@ const SignInModal = props => {
             </div> : <div className={styles.modal}>
                 {errorMessage == '' ? <span className={styles.spanSign}>Logging you in...</span> : <span className={styles.spanSign}>Error</span>}
                 {errorMessage != '' && <span className={styles.underText2}>{errorMessage}</span>}
-                {errorMessage == '' && <img src="loadingImg.png" className={styles.loadingLogin}/>}
+                {errorMessage == '' && <img src="loadingImg.png" className={styles.loadingLogin} alt='Loading...'/>}
             </div>}
             
         </div>, document.getElementById('overlay')

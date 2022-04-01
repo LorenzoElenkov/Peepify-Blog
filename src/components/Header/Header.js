@@ -18,10 +18,15 @@ const Header = (props) => {
     const onSignInClick = () => {
         setSignUpClicked(false);
         setSignInClicked(true);
+        props.onMenuClick();
+        setIsMenuOn(false);
     };
     const onSignUpClick = () => {
         setSignInClicked(false);
         setSignUpClicked(true);
+        props.onMenuClick();
+        setIsMenuOn(false);
+
     };
     const onSignInClickOut = () => {
         setSignInClicked(false);
@@ -36,6 +41,7 @@ const Header = (props) => {
         setIsMenuOn(false);
     };
     const onLogout = () => {
+        props.onMenuClick();
         signOut(auth).then(() => {
             props.onSignedUser(null);
             setUser(null);
@@ -64,11 +70,16 @@ const Header = (props) => {
 
     const handleMenuState = () => {
         setIsMenuOn(!isMenuOn);
+        props.onMenuClick(!isMenuOn);
     };
 
     const handleAccountState = () => {
         props.isAccountOnOff(true);
     }
+
+    const handleStatisticsState = () => {
+        props.isStatsOnOff(true);
+    };
 
     
 
@@ -80,7 +91,7 @@ const Header = (props) => {
                 <button onClick={handleMenuState} className={styles.closeHamburgerMenu}>x</button>
                 <span className={styles.siteTitle}>Peepify</span>
                 {auth.currentUser && <button className={styles.accountStatisticsButton} onClick={handleAccountState}>Account</button>}
-                <button className={styles.siteStatisticsButton}>Site statistics</button>
+                {auth.currentUser && <button className={styles.siteStatisticsButton} onClick={handleStatisticsState}>Site statistics</button>}
                 {!auth.currentUser ? <button onClick={onSignInClick} className={styles.loginButton}>Login</button> : null}
                 {!auth.currentUser ? <button className={styles.signupButton} onClick={onSignUpClick}>Sign up</button> : null}
                 {auth.currentUser && <button className={styles.logOut2} onClick={onLogout}>Logout</button>}
